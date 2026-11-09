@@ -148,7 +148,9 @@ dispatch_queue_t BQWorkQueue(void) {
 }
 
 // --------------------------------------------------------------- MCM API ---
+#ifndef __XPC_H__
 typedef void *xpc_object_t;
+#endif
 typedef xpc_object_t (*xpc_string_create_fn)(const char *);
 typedef void (*xpc_release_fn)(xpc_object_t);
 typedef void *(*fn_create)(void);
